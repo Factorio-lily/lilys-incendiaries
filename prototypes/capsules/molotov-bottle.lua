@@ -133,7 +133,7 @@ data:extend({
         name = "molotov-bottle",
         allow_productivity = false,
         enabled = false,
-        category = "crafting-with-fluid",
+        categories = { "crafting-with-fluid" },
         energy_required = 5,
         ingredients =
         {

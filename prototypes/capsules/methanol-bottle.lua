@@ -61,7 +61,7 @@ local methanol_bottle_item = {
     drop_sound = item_sounds.science_inventory_move,
     stack_size = 200,
     weight = 1 * kg,
-    fuel_category = "chemical",
+    fuel_categories = { "chemical" },
     fuel_value = "20MJ",
     burnt_result = "iron-plate",
     auto_recycle = false
@@ -175,8 +175,10 @@ data:extend({
     }
 })
 
-if mods["quality"] then
-    local recycling = require("__quality__/prototypes/recycling.lua")
+if mods["quality"] and mods["recycler"] then
+    -- 2.1: the recycling helpers moved out of the quality mod into the bundled `recycler` mod
+    -- (__quality__/prototypes/recycling.lua no longer exists)
+    local recycling = require("__recycler__.recycling")
     recycling.generate_self_recycling_recipe(methanol_bottle_item)
 end
 
@@ -277,7 +279,7 @@ if mods["space-age"] and mods["maraxsis"] and not settings.startup["enable-alt-r
         },
         allow_productivity = false,
         allow_quality = false,
-        category = "chemistry",
+        categories = { "chemistry" },
 ---@diagnostic disable-next-line: assign-type-mismatch
         auto_recycle = false,
         hide_from_signal_gui = false,
@@ -309,11 +311,11 @@ if mods["space-age"] and mods["maraxsis"] and not settings.startup["enable-alt-r
         },
         results = {
             { type = "item", name = science_pack_name,                amount = 100, ignored_by_stats = 100, ignored_by_productivity = 100 },
-            { type = "item", name = "maraxsis-empty-research-vessel", amount = 1,   ignored_by_stats = 1,   ignored_by_productivity = 1,  probability = 0.99 },
+            { type = "item", name = "maraxsis-empty-research-vessel", amount = 1,   ignored_by_stats = 1,   ignored_by_productivity = 1,  independent_probability = 0.99 },
         },
         allow_productivity = false,
         allow_quality = false,
-        category = "chemistry",
+        categories = { "chemistry" },
 ---@diagnostic disable-next-line: assign-type-mismatch
         auto_recycle = false,
         unlock_results = false,

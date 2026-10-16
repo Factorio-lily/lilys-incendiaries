@@ -212,7 +212,7 @@ data:extend({item, shell, cluster})
 data:extend({ {
     type = "recipe",
     name = "li-napalm-artillery-shell",
-    category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+    categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
     enabled = false,
     energy_required = 30,
     ingredients =

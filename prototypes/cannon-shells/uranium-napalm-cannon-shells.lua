@@ -156,7 +156,7 @@ data:extend({
     {
         type = "recipe",
         name = "uranium-napalm-cannon-shell",
-        category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+        categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
         subgroup = "ammo",
         crafting_machine_tint = {
             primary = { r = 1.000, g = 0.735, b = 0.643, a = 1.000 },    -- #ffbba4ff
@@ -182,7 +182,7 @@ data:extend({
     {
         type = "recipe",
         name = "uranium-napalm-cannon-shell-2",
-        category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+        categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
         subgroup = "ammo",
         crafting_machine_tint = {
             primary = { r = 1.000, g = 0.735, b = 0.643, a = 1.000 },    -- #ffbba4ff

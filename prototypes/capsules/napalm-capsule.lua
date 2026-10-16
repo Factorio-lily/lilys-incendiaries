@@ -135,7 +135,7 @@ data:extend({
         name = "napalm-capsule",
         allow_productivity = false,
         enabled = false,
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 5,
         ingredients =
         {

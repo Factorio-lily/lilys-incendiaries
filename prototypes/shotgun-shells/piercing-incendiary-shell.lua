@@ -126,7 +126,7 @@ data:extend({
     {
         type = "recipe",
         name = "piercing-incendiary-shotgun-shell",
-        category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+        categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
         subgroup = "ammo",
         crafting_machine_tint = {
             primary = { r = 1.000, g = 0.735, b = 0.643, a = 1.000 },    -- #ffbba4ff
@@ -153,7 +153,7 @@ data:extend({
     {
         type = "recipe",
         name = "piercing-incendiary-shotgun-shell-2",
-        category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+        categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
         subgroup = "ammo",
         crafting_machine_tint = {
             primary = { r = 1.000, g = 0.735, b = 0.643, a = 1.000 }, -- #ffbba4ff
@@ -179,7 +179,7 @@ else
         {
             type = "recipe",
             name = "piercing-incendiary-shotgun-shell",
-            category = "crafting-with-fluid",
+            categories = { "crafting-with-fluid" },
             subgroup = "ammo",
             crafting_machine_tint = {
                 primary = { r = 1.000, g = 0.735, b = 0.643, a = 1.000 }, -- #ffbba4ff
@@ -252,7 +252,7 @@ data:extend({
     {
         type = "recipe",
         name = "piercing-incendiary-shotgun-shell-4",
-        category = "crafting",
+        categories = { "crafting" },
         subgroup = "ammo",
         crafting_machine_tint = {
             primary = { r = 1.000, g = 0.735, b = 0.643, a = 1.000 },        -- #ffbba4ff

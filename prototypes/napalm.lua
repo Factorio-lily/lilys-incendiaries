@@ -24,7 +24,7 @@ data:extend({
         type = "recipe",
         name = "lilys-napalm-mix",
         subgroup = "fluid-recipes",
-        category = "chemistry",
+        categories = { "chemistry" },
         allow_productivity = true,
         enabled = false,
         energy_required = 10,

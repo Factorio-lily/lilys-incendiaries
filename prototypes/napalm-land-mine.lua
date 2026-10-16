@@ -139,7 +139,7 @@ data:extend({
         type = "recipe",
         name = "napalm-land-mine",
         enabled = false,
-        category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+        categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
         energy_required = 5,
         ingredients =
         {

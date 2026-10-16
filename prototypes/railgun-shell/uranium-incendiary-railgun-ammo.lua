@@ -138,7 +138,7 @@ data:extend({
     {
         type = "recipe",
         name = "uranium-incendiary-railgun-ammo",
-        category = "chemistry-or-cryogenics",
+        categories = { "chemistry", "cryogenics" },
         subgroup = "ammo",
         crafting_machine_tint = {
             primary = { r = 0.800, g = 1.000, b = 0.643, a = 1.000 },    -- #bbffa4ff

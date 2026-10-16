@@ -20,7 +20,7 @@ data:extend({
     {
         type = "recipe",
         name = "mech-armor-fireproof",
-        category = "cryogenics",
+        categories = { "cryogenics" },
         subgroup = "armor",
         allow_productivity = false,
         allow_quality = false,
@@ -42,7 +42,7 @@ data:extend({
     {
       type = "recipe",
       name = "mech-armor-fireproof-disassembly",
-      category = "advanced-crafting",
+      categories = { "advanced-crafting" },
       subgroup = "armor",
       icons = {
         {

@@ -159,7 +159,7 @@ data:extend({ item, shell })
 data:extend({ {
     type = "recipe",
     name = "fuel-air-artillery-shell",
-    category = (mods["space-age"] and "chemistry-or-cryogenics" or "chemistry"),
+    categories = { "chemistry", (mods["space-age"] and "cryogenics" or nil) },
     enabled = false,
     energy_required = 30,
     ingredients =
